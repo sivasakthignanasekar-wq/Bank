@@ -1,82 +1,57 @@
 package com.wipro.bank.bean;
 
-
-
 import java.util.Date;
-
-
 
 public class TransferBean {
 
-	private int transactionId;
+    private int transactionId;
+    private String fromAccountNumber;
+    private String toAccountNumber;
+    private Date dateOfTransaction;
+    private float amount;
 
-	private String fromAccountNumber;
+    public int getTransactionId() {
+        return transactionId;
+    }
 
-	private String toAccountNumber;
+    public void setTransactionId(int transactionId) {
+        this.transactionId = transactionId;
+    }
 
-	private Date dateOfTransaction;
+    // Getter & Setter for From Account
+    public String getFromAccountNumber() {
+        return fromAccountNumber;
+    }
 
-	private float amount;
+    public void setFromAccountNumber(String fromAccountNumber) {
+        if (fromAccountNumber != null) {
+            this.fromAccountNumber = fromAccountNumber.trim();
+        }
+    }
 
-	
+    public String getToAccountNumber() {
+        return toAccountNumber;
+    }
 
-	public int getTransactionId() {
+    public void setToAccountNumber(String toAccountNumber) {
+        if (toAccountNumber != null) {
+            this.toAccountNumber = toAccountNumber.trim();
+        }
+    }
 
-		return transactionId;
+    public Date getDateOfTransaction() {
+        return dateOfTransaction;
+    }
 
-	}
+    public void setDateOfTransaction(Date dateOfTransaction) {
+        this.dateOfTransaction = dateOfTransaction;
+    }
 
-	public void setTransactionId(int transactionId) {
+    public float getAmount() {
+        return amount;
+    }
 
-		this.transactionId = transactionId;
-
-	}
-
-	public String getFromAccountNumber() {
-
-		return fromAccountNumber;
-
-	}
-
-	public void setFromAccountNumber(String fromAccountNumber) {
-
-		this.fromAccountNumber = fromAccountNumber;
-
-	}
-
-	public String getToAccountNumber() {
-
-		return toAccountNumber;
-
-	}
-
-	public void setToAccountNumber(String toAccountNumber) {
-
-		this.toAccountNumber = toAccountNumber;
-
-	}
-
-	public Date getDateOfTransaction() {
-
-		return dateOfTransaction;
-
-	}
-
-	public void setDateOfTransaction(Date dateOfTransaction) {
-
-		this.dateOfTransaction = dateOfTransaction;
-
-	}
-
-	public float getAmount() {
-
-		return amount;
-
-	}
-
-	public void setAmount(float amount) {
-
-		this.amount = amount;
-
-	}
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
 }
